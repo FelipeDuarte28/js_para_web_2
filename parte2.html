@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parte2_desafio2</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+    <h2><a href="index.html">Volver al menu</a></h2>
+
+    <section class="desafio2">
+
+        <div class="sticker">
+            <img src="./assets/img/mano.png" alt="mano">
+            <input type="number" min="0" id="input-sticker-1" name="cantidad" value="0" onchange="verificar()">
+        </div>
+
+        <div class="sticker">
+            <img src="./assets/img/laptop.png" alt="mano">
+            <input type="number" min="0" id="input-sticker-2" name="cantidad" value="0" onchange="verificar()">
+        </div>
+
+        <div class="sticker">
+            <img src="./assets/img/oso.jpg" alt="mano">
+            <input type="number" min="0" id="input-sticker-3" name="cantidad" value="0" onchange="verificar()">
+        </div>
+
+    </section>
+
+    <p class="desafio2" id="resultado">Elige cuantos stickers llevarás (máximo 10)</p>
+
+    <script>
+
+        function verificar() {
+            const input1 = document.querySelector("#input-sticker-1").value
+            const input2 = document.querySelector("#input-sticker-2").value
+            const input3 = document.querySelector("#input-sticker-3").value
+
+            const resultado = parseInt(input1)+parseInt(input2)+parseInt(input3)
+
+            if (resultado > 10) {
+                document.querySelector("#resultado").innerHTML = "¡Llevas demasiados stickers! ("+resultado+")"
+            }
+            else {
+                document.querySelector("#resultado").innerHTML = "<strong>Llevas "+resultado+" stickers</strong>. "+input1+" del primero, "+input2+" del segundo, y "+input3+" del tercero."
+            }
+        }
+
+    </script>
+</body>
+</html>

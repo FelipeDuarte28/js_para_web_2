@@ -1,0 +1,25 @@
+img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    object-fit: contain;
+}
+
+.sinBorde {
+    border: 2px none red;
+}
+
+.conBorde {
+    border: 2px solid red;
+}
+
+.desafio2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sticker {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parte3_desafio2</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+    <h2><a href="index.html">Volver al menu</a></h2>
+    <p><strong>Ingresa el password:</strong></p>
+    <select name="" id="primero">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+    <select name="" id="segundo">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+    <select name="" id="tercero">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+    <div><input type="button" class="button" value="Ingresar" onclick="validar()"></div>
+    <p id="resultado"></p>
+
+    <script>
+        function validar() {
+            var uno = document.getElementById("primero");
+            var dos = document.getElementById("segundo");
+            var tres = document.getElementById("tercero");
+
+            password = uno.options[uno.selectedIndex].text + dos.options[dos.selectedIndex].text + tres.options[tres.selectedIndex].text
+            
+            if (password == "911") {
+                document.querySelector("#resultado").innerHTML = "password 1 correcto";
+            }
+            else if (password == "714") {
+                document.querySelector("#resultado").innerHTML = "password 2 correcto";
+            }
+            else {
+                document.querySelector("#resultado").innerHTML = "password incorrecto";
+            }
+        }
+    </script>
+
+</body>
+</html>
